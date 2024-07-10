@@ -1,5 +1,9 @@
-function isLandscape(width, height) {
-  return (width > height) ? true : false
-}
+// FizzBuzz
+let statement
 
-console.log(isLandscape(110, 100))
+for (let i = 1; i <= 30; i++){
+  statement = '';
+  if (i % 3 == 0) statement += 'Fizz';
+  if (i % 5 == 0) statement += 'Buzz';
+  console.log(i, statement)
+}
