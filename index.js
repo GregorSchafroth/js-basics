@@ -1,10 +1,11 @@
-// Date Object
+// object exercise: address
 
-const now = new Date()
-console.log(now)
+address = {
+  street: 'Geissfluwheg 27',
+  city: 'Olten',
+  zipCode: 4600,
+}
 
-now.setFullYear('2020')
-console.log(now)
-
-const juliBirthday = new Date('July 10 1993 01:00')
-console.log(juliBirthday)
+for (let key in address) {
+  console.log(`${key}: ${address[key]}`);
+}
