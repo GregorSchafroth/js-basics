@@ -1,8 +1,11 @@
+const array = [0, null, 1, 2, 3, 4, 'hello', '', 'mas'];
 
-showNumbers(15);
+console.log(countTruthy(array));
 
-function showNumbers(limit) {
-  for (i = 1; i <= limit; i++){
-    console.log(`${i} ${i % 2 == 0 ? 'EVEN' : 'ODD'}`)
-  } 
+function countTruthy(array){
+  let count = 0;
+  for (value of array){
+    if (value) count += 1
+  }
+  return count
 }
