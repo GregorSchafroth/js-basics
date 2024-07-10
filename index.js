@@ -1,9 +1,12 @@
-// FizzBuzz
-let statement
+let speed = 130;
+console.log(checkSpeed(speed));
 
-for (let i = 1; i <= 30; i++){
-  statement = '';
-  if (i % 3 == 0) statement += 'Fizz';
-  if (i % 5 == 0) statement += 'Buzz';
-  console.log(i, statement)
+function checkSpeed(speed) {
+  const speedLimit = 120;
+  const kmPerPoint = 5;
+  const points = Math.floor((speed - speedLimit) / kmPerPoint)
+  if (points <= 0) return 'ok';
+  if (points >= 12) return 'License suspended'
+  if (points == 1) return '1 point'
+  return `${points} points`
 }
