@@ -1,9 +1,5 @@
-const colors = ['red', 'green', 'blue'];
+function isLandscape(width, height) {
+  return (width > height) ? true : false
+}
 
-// for in
-for (let index in colors)
-  console.log(index, colors[index])
-
-// for of
-for (let color of colors)
-  console.log(color);
+console.log(isLandscape(110, 100))
