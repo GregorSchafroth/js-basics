@@ -1,14 +1,13 @@
-let role = 'moderator';
+const person = {
+  name: 'Greg',
+  age: 30
+};
 
-switch (role) {
-  case 'guest':
-    console.log('Guest User');
-    break;
-  
-  case 'moderator':
-    console.log('Moderator User');
-    break;
+for (let key in person)
+  console.log(key, person[key]);
 
-  default:
-    console.log('Unknown User');
-}
+const colors = ['red', 'green', 'blue'];
+
+for (let index in colors)
+  console.log(index, colors[index])
+
