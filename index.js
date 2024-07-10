@@ -5,13 +5,15 @@ const circle = {
   }
 };
 
-for (let key in circle)
-  console.log(key, circle);
+// // this approach is a bit old:
+// const another = {};
+// for (let key in circle)
+//   another[key] = circle[key]
 
-for (let key of Object.keys(circle))
-  console.log(key);
+// // a more modern way
+// const another = Object.assign({}, circle); //this code is the same as the 3 lines above
 
-for (let entry of Object.entries(circle))
-  console.log(entry);
+// yet another way:
+const another = { ...circle };
 
-if ('radius' in circle) console.log('yes');
+console.log(another)
