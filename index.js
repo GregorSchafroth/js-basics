@@ -1,21 +1,15 @@
-// object exercise: blog post
+// Arrays: adding elements
 
-let blogPost = {
-  title: 'post',
-  body: 'body text',
-  author: 'redsheep',
-  views: 123,
-  comments: [
-    {
-      author: 'greensheep',
-      body: 'comment1'
-    },
-    {
-      author: 'bluesheep',
-      body: 'comment2'
-    }
-  ],
-  isLive: false
-}
+const numbers = [3, 4];
 
-console.log(blogPost)
+// End
+numbers.push(5, 6)
+console.log(numbers);
+
+// Beginning
+numbers.unshift(1, 2)
+console.log(numbers);
+
+// Middle
+numbers.splice(3, 0, 'a', '我')
+console.log(numbers);
