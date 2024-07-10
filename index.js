@@ -1,21 +1,17 @@
-// Factory Function
-function createCircle() {
- return {
-  radius,
+const circle = {
+  radius: 1,
   draw() {
-    console.log('draw');
+    // console.log('draw')
   }
- } 
-}
+};
 
-const circle1 = createCircle(1);
+for (let key in circle)
+  console.log(key, circle);
 
-// Constructor Function
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw')
-  }
-}
+for (let key of Object.keys(circle))
+  console.log(key);
 
-const circle2 = new Circle(1);
+for (let entry of Object.entries(circle))
+  console.log(entry);
+
+if ('radius' in circle) console.log('yes');
